@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Urban Resilience Command Center</title>
+
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="logo">🌆 URBAN RESILIENCE AI</div>
+
+      <div class="nav-links">
+        <button onclick="showPage('dashboard')">Dashboard</button>
+        <button onclick="showPage('about')">About</button>
+        <button onclick="showPage('settings')">Settings</button>
+      </div>
+    </div>
+
+    <!-- DASHBOARD PAGE -->
+    <div id="dashboard" class="page active">
+      <div class="grid">
+        <div class="card">
+          <h2>📊 City Status</h2>
+          <pre id="status">Loading...</pre>
+        </div>
+
+        <div class="card">
+          <h2>🗺 Live Risk Map</h2>
+          <div id="map"></div>
+        </div>
+
+        <div class="card">
+          <h2>🤖 AI Recommendations</h2>
+          <div id="recommendation">Waiting for AI...</div>
+        </div>
+
+        <div class="card">
+          <h2>💬 Claude Assistant</h2>
+          <div id="chatbox"></div>
+          <input id="chatinput" placeholder="Ask the city AI..." />
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="about" class="page">
+      <h2>About Urban Resilience AI</h2>
+      <p>
+        This system predicts and manages urban disruptions using multi-agent AI.
+        It integrates traffic, weather, power and citizen inputs to provide
+        real-time city guidance and alerts.
+      </p>
+    </div>
+
+    <!-- SETTINGS -->
+    <div id="settings" class="page">
+      <h2>Settings</h2>
+      <p>Future: alert thresholds, city selection, notification preferences.</p>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

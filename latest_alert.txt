@@ -1,0 +1,8 @@
+
+CITY RISK LEVEL: ✅ NORMAL
+
+Flood: Normal Flood Risk
+Traffic: Traffic Normal
+Power: Power Stable
+
+Advice: City operating normally.
